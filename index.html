@@ -11,6 +11,32 @@
     <link rel="stylesheet" href="/reset.css">
 </head>
 <body>
+    <main>
+        <div class="container">
+            <form id="clr-scheme--form" class="clr-scheme--form">
+                <input type="color" value="#F55A5A" id="clr-scheme--input" class="clr-scheme--input">
+                <div class="select-group">
+                    <select name="color-types" id="clr-scheme--types" class="clr-scheme--types">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="monochrome-dark">Monochrome-dark</option>
+                        <option value="monochrome-light">Monochrome-light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic-complement</option>
+                        <option value="triad">Triad</option>
+                        <option value="quad">Quad</option>
+                    </select>
+                    <span class="custom-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none">
+                        <path d="M15 1L8 8L1 1" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></span>
+                </div>
+                <input type="submit" value="Get color scheme" id="clr-scheme--submit" class="clr-scheme--submit">
+            </form>
+            <article id="clr-scheme--container" class="clr-scheme--container">
+                <!--COLOR SCHEME HERE!-->
+            </article>
+        </div>
+    </main>
     <script src="/index.js" type="module"></script>
 </body>
 </html>
