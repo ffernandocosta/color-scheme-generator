@@ -1,9 +1,16 @@
 let colorsArr = [];
-const formEl = document.getElementById("clr-scheme--form")
+const formEl = document.getElementById("clr-scheme--form");
+const clrSchemeDiv = document.getElementById("clr-scheme--container");
 
 formEl.addEventListener("submit", (e) => {
     e.preventDefault();
     getColorScheme();
+})
+
+clrSchemeDiv.addEventListener("click", (e) => {
+    if (e.target.dataset.hexValue) {
+        navigator.clipboard.writeText(`${e.target.dataset.hexValue}`);
+    }
 })
 
 async function getColorScheme() {
@@ -21,8 +28,8 @@ function renderColorScheme() {
     colorsArr.forEach((color) => {
         html += `
             <div class="clr-scheme-group">
-                <img src="${color.image.bare}" class="clr-img"></img>
-                <p class="hex-value">${color.hex.value}</p>
+                <img src="${color.image.bare}" class="clr-img" data-hex-value="${color.hex.value}"></img>
+                <p class="hex-value" data-hex-value="${color.hex.value}">${color.hex.value}</p>
             </div>
         `
     })
