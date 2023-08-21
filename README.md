@@ -25,6 +25,8 @@ Os usuários devem ser capazes de:
 
 ### Preview video
 
+https://github.com/ffernandocosta/color-scheme-generator/assets/70672573/65444c3b-ecb1-41c8-b365-bb8b62e0c261
+
 ### Links
 
 - [Live version](https://color-scheme-generator-eight.vercel.app)
@@ -91,7 +93,7 @@ Users should be able to:
 
 ### Video preview
 
-
+https://github.com/ffernandocosta/color-scheme-generator/assets/70672573/65444c3b-ecb1-41c8-b365-bb8b62e0c261
 
 ### Links
 
