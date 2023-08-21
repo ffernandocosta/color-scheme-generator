@@ -108,7 +108,7 @@ body {
     animation: fadeInClipboardMessage 0.5s ease-in-out;
 }
 
-
+/* ANIMATION */
 @keyframes fadeInClipboardMessage {
     0% {
         opacity: 0;
@@ -118,6 +118,7 @@ body {
     }
 }
 
+/* RESPONSIVE */
 @media (max-width: 500px) {
 
     body {
