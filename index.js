@@ -1,6 +1,7 @@
 let colorsArr = [];
 const formEl = document.getElementById("clr-scheme--form");
 const clrSchemeDiv = document.getElementById("clr-scheme--container");
+const copyToClipboardMessageEl = document.getElementById("copy-to-clipboard-message");
 
 formEl.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -10,6 +11,7 @@ formEl.addEventListener("submit", (e) => {
 clrSchemeDiv.addEventListener("click", (e) => {
     if (e.target.dataset.hexValue) {
         navigator.clipboard.writeText(`${e.target.dataset.hexValue}`);
+        renderCopyToClipboardMessage();
     }
 })
 
@@ -34,6 +36,13 @@ function renderColorScheme() {
         `
     })
     document.getElementById("clr-scheme--container").innerHTML = html
+}
+
+function renderCopyToClipboardMessage() {
+    copyToClipboardMessageEl.style.display = "flex";
+    setTimeout(() => {
+        copyToClipboardMessageEl.style.display = "none";
+    }, 1800)
 }
 
 getColorScheme()
