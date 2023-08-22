@@ -6,23 +6,23 @@ const copyToClipboardMessageEl = document.getElementById("copy-to-clipboard-mess
 formEl.addEventListener("submit", (e) => {
     e.preventDefault();
     getColorScheme();
-})
+});
 
 clrSchemeDiv.addEventListener("click", (e) => {
     if (e.target.dataset.hexValue) {
         navigator.clipboard.writeText(`${e.target.dataset.hexValue}`);
         renderCopyToClipboardMessage();
     }
-})
+});
 
 async function getColorScheme() {
     const clrSeed = document.getElementById("clr-scheme--input").value.replace("#", "")
-    const clrSchemeType = document.getElementById("clr-scheme--types").value
+    const clrSchemeType = document.getElementById("clr-scheme--types").value;
 
-    const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${clrSeed}&mode=${clrSchemeType}`, {method:"GET"})
+    const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${clrSeed}&mode=${clrSchemeType}`, {method:"GET"});
     const data = await response.json();
-    colorsArr = data.colors
-    renderColorScheme()
+    colorsArr = data.colors;
+    renderColorScheme();
 }
 
 function renderColorScheme() {
@@ -35,7 +35,7 @@ function renderColorScheme() {
             </div>
         `
     })
-    document.getElementById("clr-scheme--container").innerHTML = html
+    document.getElementById("clr-scheme--container").innerHTML = html;
 }
 
 function renderCopyToClipboardMessage() {
@@ -45,4 +45,4 @@ function renderCopyToClipboardMessage() {
     }, 1800)
 }
 
-getColorScheme()
+getColorScheme();
